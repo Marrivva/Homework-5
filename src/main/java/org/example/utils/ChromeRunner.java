@@ -17,10 +17,10 @@ public class ChromeRunner {
         Configuration.headless = false;
         Configuration.baseUrl = "https://www.coinmania.ge/";
 
-        SelenideLogger.addListener("AllureSelenide");
+        SelenideLogger.addListener("AllureSelenide",
         new AllureSelenide()
                 .screenshots(true)
-                .savePageSource(false);
+                .savePageSource(false));
 
     }
 @AfterTest
