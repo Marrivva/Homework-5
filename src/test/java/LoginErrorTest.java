@@ -15,7 +15,7 @@ public class LoginErrorTest extends ChromeRunner {
     public void invalidLoginShowsErrorMessage() {
         open("login");
 
-        $("#Email").shouldBe(visible).setValue("wrongmail@gmial.com");
+        $("#Email").shouldBe(visible).setValue("wrongmail@gmail.com");
 
         String Password = "incorrectPass";
         SelenideElement PasswordInput = $("#Password").shouldBe(visible).setValue(Password);
