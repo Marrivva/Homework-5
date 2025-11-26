@@ -12,10 +12,10 @@ public class ChromeRunner {
 
     @BeforeTest
     public static void setup() {
-        open("https://www.coinmania.ge/");
+        open("https://coinmania.ge/");
         Configuration.browserSize = "1920x1080";
         Configuration.headless = false;
-        Configuration.baseUrl = "https://www.coinmania.ge/";
+        Configuration.baseUrl = "https://coinmania.ge/";
 
         SelenideLogger.addListener("AllureSelenide",
         new AllureSelenide()

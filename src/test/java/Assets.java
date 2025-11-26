@@ -13,13 +13,12 @@ public class Assets extends ChromeRunner {
     @Test
     public void BTCPrice(){
         open("assets");
-       SelenideElement BTCRow = $(by("data-assetid", "btc"));
+        SelenideElement BTCRow = $(by("data-assetid", "btc"));
         BTCRow.click();
         SelenideElement Price = $("#assetBuyPrice");
         String buyPrice = $(Price).getText();
 
         System.out.println("BTC Buy Price = " + buyPrice);
-
 
     }
 }

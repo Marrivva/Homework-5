@@ -19,8 +19,11 @@ public class LoginErrorTest extends ChromeRunner {
 
         String Password = "incorrectPass";
         SelenideElement PasswordInput = $("#Password").shouldBe(visible).setValue(Password);
-
+        $("iframe[title=reCAPTCHA]").click();
+        sleep(1000);
         $("button[class=\"btn bg-green-200 text-white rounded-1 w-100\"]").click();
+
+     //   Assert.assertTrue($("field-validation-error text-danger mt-2 text-start").is(visible));
 
         Assert.assertNotEquals(PasswordInput.getValue(), Password, "password validation");
         Assert.assertTrue(PasswordInput.is(Condition.empty));
